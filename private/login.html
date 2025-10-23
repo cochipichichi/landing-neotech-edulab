@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Acceso privado — Neotech EduLab</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <meta name="theme-color" content="#0c0f10">
+  <style>
+    .login-card{max-width:460px;margin:8vh auto;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1.25rem;box-shadow:0 12px 32px var(--shadow)}
+    form{display:grid;gap:.8rem}
+    input{background:var(--surf);color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:.7rem}
+    .muted{color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+<header class="header"><a class="brand" href="../index.html">← Volver</a></header>
+<main class="section">
+  <div class="login-card">
+    <h1>Acceso privado</h1>
+    <p class="muted">Solo para Francisco y Belén.</p>
+    <form id="loginForm">
+      <label>Correo electrónico
+        <input id="email" type="email" required placeholder="tucorreo@...">
+      </label>
+      <label>Contraseña
+        <input id="password" type="password" required placeholder="••••••••">
+      </label>
+      <button class="btn" type="submit">Ingresar</button>
+      <div id="msg" class="muted"></div>
+    </form>
+  </div>
+</main>
+<script type="module">
+  import {{ handleLogin }} from "../js/auth.js";
+  document.getElementById('loginForm').addEventListener('submit', handleLogin);
+</script>
+<footer class="footer"><p>💡 Neotech EduLab SpA · Acceso privado</p></footer>
+</body>
+</html>

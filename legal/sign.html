@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neotech EduLab — Firmar / Capturar firma</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .board{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1rem}
+  canvas{background:#fff;border-radius:12px;border:1px solid var(--border);touch-action:none;width:100%;max-width:720px;height:260px}
+  .row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}
+  .row label{display:grid;gap:.3rem}
+  input[type="text"],input[type="date"]{background:var(--surf);color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:.55rem}
+</style>
+<meta name="theme-color" content="#0c0f10">
+<script type="module">import { requireAuth } from "../js/auth.js"; requireAuth();</script>
+</head>
+<body>
+<header class="header"><a class="brand" href="index.html">← Documentos</a></header>
+<main class="section">
+  <h1>✍️ Capturar firma digital</h1>
+  <p>Dibuja tu firma y descarga la imagen (PNG) para insertarla en el PDF o DOCX.</p>
+  <div class="board">
+    <canvas id="pad" width="1280" height="460"></canvas>
+    <div class="row">
+      <button class="btn" id="clear">🧹 Limpiar</button>
+      <button class="btn ghost" id="download">⬇️ Descargar firma (PNG)</button>
+    </div>
+    <div class="row" style="margin-top:1rem">
+      <label>Nombre <input type="text" id="nombre" placeholder="Nombre y Apellido"></label>
+      <label>RUT/DNI <input type="text" id="rut" placeholder="RUT o DNI"></label>
+      <label>Fecha <input type="date" id="fecha"></label>
+    </div>
+  </div>
+  <p style="margin-top:1rem;color:var(--muted)">Tip: Inserta esta firma en los campos del PDF rellenable o en el DOCX y exporta a PDF.</p>
+</main>
+<script>
+(function(){
+  const pad=document.getElementById('pad');const ctx=pad.getContext('2d');ctx.lineWidth=3;ctx.lineCap='round';ctx.strokeStyle='#111';
+  let d=false,lx=0,ly=0;function P(e){const r=pad.getBoundingClientRect();const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;const y=(e.touches?e.touches[0].clientY:e.clientY)-r.top;return {x:x*(pad.width/r.width),y:y*(pad.height/r.height)}}
+  function S(e){d=true;const p=P(e);lx=p.x;ly=p.y}
+  function M(e){if(!d) return;const p=P(e);ctx.beginPath();ctx.moveTo(lx,ly);ctx.lineTo(p.x,p.y);ctx.stroke();lx=p.x;ly=p.y;e.preventDefault()}
+  function E(){d=false}
+  pad.addEventListener('mousedown',S);pad.addEventListener('mousemove',M);pad.addEventListener('mouseup',E);pad.addEventListener('mouseleave',E);
+  pad.addEventListener('touchstart',S,{passive:false});pad.addEventListener('touchmove',M,{passive:false});pad.addEventListener('touchend',E);
+  document.getElementById('clear').addEventListener('click',()=>ctx.clearRect(0,0,pad.width,pad.height));
+  document.getElementById('download').addEventListener('click',()=>{const n=document.getElementById('nombre').value||'firma';const f=document.getElementById('fecha').value||new Date().toISOString().slice(0,10);const a=document.createElement('a');a.href=pad.toDataURL('image/png');a.download=`firma_${n.replace(/\s+/g,'_')}_${f}.png`;a.click();});
+})();
+</script>
+<footer class="footer"><p>💡 Neotech EduLab SpA — Educación Inmersiva & I+D · RUT 78.278.924-4</p></footer>
+</body>
+</html>
