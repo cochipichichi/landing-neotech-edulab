@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neotech EduLab — Educación Inmersiva & I+D</title>
+  <meta name="theme-color" content="#0c0f10">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/style.css" as="style">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="header" role="banner">
+    <a class="brand" href="#" aria-label="Inicio" title="Inicio">
+      <img src="assets/logo-neotech.svg" alt="Neotech EduLab — Educación Inmersiva & I+D">
+    </a>
+    <nav class="nav" role="navigation" aria-label="Principal">
+      <div class="theme-switcher">
+        <button class="theme-btn" id="themeBtn" aria-haspopup="true" aria-expanded="false">🌓 Tema</button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="Selector de tema">
+          <button role="menuitem" data-theme="claro">☀️ Claro</button>
+          <button role="menuitem" data-theme="oscuro">🌙 Oscuro</button>
+          <button role="menuitem" data-theme="alto">⚡ Alto contraste</button>
+          <button role="menuitem" data-theme="sepia">📜 Sepia</button>
+        </div>
+      </div>
+      <a href="#xr">Educación Inmersiva XR</a>
+      <a href="#id">I+D Educativa y Sostenibilidad</a>
+      <a href="#inclusion">Inclusión y Accesibilidad</a>
+      <a href="#consultoria">Consultoría y Transferencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Neotech EduLab — Educación Inmersiva &amp; I+D</h1>
+      <p class="subtitle">Educación inmersiva, tecnología y ciencia aplicada al aprendizaje inclusivo y sostenible 🌍</p>
+      <div class="cta-row">
+        <a class="btn" href="#contacto">🤝 Colaborar</a>
+        <a class="btn ghost" href="#proyectos">🚀 Ver proyectos</a>
+      </div>
+    </section>
+
+    <section id="xr" class="section">
+      <h2>Educación Inmersiva XR</h2>
+      <p>Desarrollamos soluciones de realidad virtual (VR), aumentada (AR) y mixta (MR) para el aprendizaje, creando experiencias inmersivas y medibles.</p>
+      <ul class="bullets">
+        <li>🥽 Repositorios con viewers 3D/AR/VR y evaluaciones.</li>
+        <li>📊 Analítica de uso para docentes y equipos directivos.</li>
+        <li>🧠 Integración curricular y accesibilidad desde el diseño.</li>
+      </ul>
+    </section>
+
+    <section id="id" class="section alt">
+      <h2>I+D Educativa y Sostenibilidad</h2>
+      <p>Investigación aplicada y transferencia tecnológica en educación, agricultura sustentable e IoT ambiental.</p>
+      <ul class="bullets">
+        <li>🌿 SIAMP / invernadero inteligente / biodigestor educativo.</li>
+        <li>🛰️ Sensores, tableros y visualización de datos.</li>
+        <li>🤝 Convenios universidad–escuela–comunidad.</li>
+      </ul>
+    </section>
+
+    <section id="inclusion" class="section">
+      <h2>Inclusión y Accesibilidad</h2>
+      <p>Diseño universal y tecnología asistiva para que todos aprendan: contenidos accesibles, impresión 3D, guías narradas y ajustes de contraste.</p>
+      <ul class="bullets">
+        <li>♿ Recursos con alto contraste y tipografías legibles.</li>
+        <li>🖨️ Piezas táctiles 3D y señalética braille.</li>
+        <li>🧩 Adaptaciones PIE y evaluación formativa.</li>
+      </ul>
+    </section>
+
+    <section id="consultoria" class="section alt">
+      <h2>Consultoría y Transferencia Tecnológica</h2>
+      <p>Acompañamos a instituciones en adopción de tecnologías educativas, gestión del cambio y medición de impacto.</p>
+      <ul class="bullets">
+        <li>🧭 Estrategia, pilotos y escalamiento.</li>
+        <li>🛠️ Integraciones con hardware y sistemas.</li>
+        <li>📚 Capacitación docente y guías de uso.</li>
+      </ul>
+    </section>
+
+    <section id="proyectos" class="section">
+      <h2>Proyectos destacados</h2>
+      <div class="cards">
+        <article class="card"><h3>🧠 Diseño Sin Barreras</h3><p>Educación inclusiva con impresión 3D y tecnologías asistivas.</p></article>
+        <article class="card"><h3>🌿 SIAMP</h3><p>IoT para monitoreo acuícola y agricultura sustentable.</p></article>
+        <article class="card"><h3>🥽 Ver con las Manos</h3><p>XR + patrimonio táctil para aprendizaje significativo.</p></article>
+        <article class="card"><h3>🌱 Invernadero Inteligente</h3><p>Automatización educativa con sensores y analítica.</p></article>
+      </div>
+    </section>
+
+    
+    <section id="portafolio" class="section">
+      <h2>Portafolio</h2>
+      <div class="cards portfolio">
+        <article class="card">
+          <h3>🌱 Suelo Sustentable</h3>
+          <p>Sitio educativo con visor 3D/AR/VR, quiz y ticket de salida.</p>
+          <div class="tags"><span class="tag">XR</span><span class="tag">Ciencias</span></div>
+          <p><a class="btn ghost" href="https://panchopinto.github.io/suelo-sustentable/" target="_blank" rel="noopener">Abrir</a></p>
+        </article>
+        <article class="card">
+          <h3>🌿 SIAMP</h3>
+          <p>Monitoreo IoT para acuicultura y agro con visualización de datos.</p>
+          <div class="tags"><span class="tag">IoT</span><span class="tag">Sustentabilidad</span></div>
+          <p><a class="btn ghost" href="#" target="_blank" rel="noopener">Abrir</a></p>
+        </article>
+        <article class="card">
+          <h3>🖐️ Ver con las Manos</h3>
+          <p>XR y piezas táctiles impresas en 3D para aprendizaje inclusivo.</p>
+          <div class="tags"><span class="tag">Accesibilidad</span><span class="tag">XR</span></div>
+          <p><a class="btn ghost" href="#" target="_blank" rel="noopener">Abrir</a></p>
+        </article>
+        <article class="card">
+          <h3>🧠 Diseño Sin Barreras</h3>
+          <p>Impresión 3D y soluciones de asistencia personalizadas.</p>
+          <div class="tags"><span class="tag">Accesibilidad</span><span class="tag">3D</span></div>
+          <p><a class="btn ghost" href="#" target="_blank" rel="noopener">Abrir</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="section alt">
+      <h2>Contacto institucional / Propuestas de colaboración</h2>
+<p>📄 Documentos disponibles: <a class="btn ghost" href="empresa/NDA_Confidencialidad.md" target="_blank">NDA</a> <a class="btn ghost" href="empresa/MOU_Colaboracion_I+D.md" target="_blank">MOU</a> <a class="btn ghost" href="empresa/Propuesta_Tecnica.md" target="_blank">Propuesta</a> <a class="btn ghost" href="empresa/Dossier_Institucional.md" target="_blank">Dossier</a></p>
+      <p>¿Te interesa colaborar, investigar o implementar soluciones de educación inmersiva? Escríbenos:</p>
+      <ul class="contact-list">
+        <li>📧 <a href="mailto:contacto@neotechedulab.cl">contacto@neotechedulab.cl</a></li>
+        <li>👨‍💻 Francisco Pinto — <a href="mailto:franciscoandresp@gmail.com">franciscoandresp@gmail.com</a> · +56 9 2002 7992</li>
+        <li>👩‍🏫 Belén Acuña — <a href="mailto:belen.acpe@gmail.com">belen.acpe@gmail.com</a> · +56 9 6266 4960</li>
+      </ul>
+      <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            action="https://formspree.io/f/xyzzzzzz" class="contact-form">
+        <input type="hidden" name="form-name" value="contacto">
+        <p style="display:none"><label>Don’t fill this out: <input name="bot-field"></label></p>
+        <div class="grid">
+          <label>Nombre<input name="nombre" required></label>
+          <label>Email<input type="email" name="email" required></label>
+        </div>
+        <label>Asunto<input name="asunto" required></label>
+        <label>Mensaje<textarea name="mensaje" rows="5" required></textarea></label>
+        <button class="btn" type="submit">Enviar mensaje</button>
+      </form>
+      <div class="cta-row">
+        <a class="btn" href="mailto:contacto@neotechedulab.cl?subject=Colaboración%20Neotech%20EduLab">💌 Enviar correo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>💡 Neotech EduLab SpA — Educación Inmersiva &amp; I+D · RUT 78.278.924-4</p>
+    <p>Hecho con ❤️ para Chile — © <span id="year"></span></p>
+  </footer>
+
+  
+  <script>
+    // PWA minimal
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // === Theme handling ===
+    const root = document.documentElement;
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const themeBtn = document.getElementById('themeBtn');
+    const themeMenu = document.getElementById('themeMenu');
+    const THEMES = {
+      claro:   { color: '#f7fafc' },
+      oscuro:  { color: '#0c0f10' },
+      alto:    { color: '#000000' },
+      sepia:   { color: '#f4ecd8' }
+    };
+    function setTheme(t){
+      const key = THEMES[t] ? t : 'oscuro';
+      root.setAttribute('data-theme', key);
+      try{ localStorage.setItem('neotech-theme', key); }catch(e){}
+      if(metaTheme) metaTheme.setAttribute('content', THEMES[key].color);
+    }
+    function initTheme(){
+      let t = 'oscuro';
+      try{ t = localStorage.getItem('neotech-theme') || t; }catch(e){}
+      setTheme(t);
+    }
+    function toggleMenu(force){
+      const open = force!==undefined ? force : !themeMenu.classList.contains('open');
+      themeMenu.classList.toggle('open', open);
+      themeBtn.setAttribute('aria-expanded', String(open));
+    }
+    themeBtn.addEventListener('click', ()=>toggleMenu());
+    themeMenu.addEventListener('click', (e)=>{
+      const btn = e.target.closest('button[data-theme]');
+      if(!btn) return;
+      setTheme(btn.dataset.theme);
+      toggleMenu(false);
+    });
+    document.addEventListener('click', (e)=>{
+      if(!themeMenu.contains(e.target) && e.target!==themeBtn) toggleMenu(false);
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key==='Escape') toggleMenu(false);
+    });
+    initTheme();
+  </script>
+
+</body>
+</html>

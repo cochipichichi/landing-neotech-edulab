@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" role="img" aria-label="Neotech EduLab logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#00bcd4"/>
+      <stop offset="100%" stop-color="#6a00ff"/>
+    </linearGradient>
+  </defs>
+  <rect fill="none" width="320" height="80" rx="12"/>
+  <g transform="translate(10,10)">
+    <path d="M30 0l26 15v30L30 60 4 45V15z" fill="url(#g)"/>
+    <path d="M30 10l16 9v18L30 46l-16-9V19z" fill="#0c0f10"/>
+  </g>
+  <g fill="#ffffff" font-family="Inter,Segoe UI,Arial" font-weight="800">
+    <text x="80" y="36" font-size="26">NEOTECH</text>
+    <text x="80" y="60" font-size="18" fill="#b2ebf2">EDULAB</text>
+  </g>
+</svg>

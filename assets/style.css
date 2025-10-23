@@ -1,0 +1,73 @@
+/* Neotech EduLab — minimal corporate theme (dark) */
+:root{
+  --bg:#0c0f10; --surf:#12151a; --ink:#ffffff; --muted:#cfd8dc;
+  --pri:#00bcd4; --pri-2:#0099b3; --card:#0f141b; --border:#1f2833;
+  --shadow:rgba(0,0,0,.35);
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+.header{position:sticky;top:0;z-index:5;display:flex;gap:1rem;align-items:center;justify-content:space-between;background:var(--surf);padding:1rem 2rem;border-bottom:1px solid var(--border);box-shadow:0 6px 20px var(--shadow)}
+.brand img{height:48px}
+.nav a{color:var(--ink);text-decoration:none;margin:0 .75rem;font-weight:600;opacity:.9}
+.nav a:hover{color:var(--pri)}
+.hero{padding:6rem 2rem;text-align:center;background:linear-gradient(135deg,#0d1b2a,#1b263b);border-bottom:2px solid var(--pri)}
+.hero h1{font-size:clamp(2rem,4.2vw,3rem);margin:0 0 .75rem}
+.subtitle{color:var(--muted);max-width:900px;margin:0 auto 1.5rem}
+.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--pri);color:#001015;text-decoration:none;padding:.85rem 1.25rem;border-radius:12px;font-weight:800;box-shadow:0 8px 24px var(--shadow)}
+.btn:hover{background:var(--pri-2)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--pri)}
+.section{padding:4rem 2rem;max-width:1100px;margin-inline:auto}
+.section.alt{background:radial-gradient(1200px 400px at 50% -100px, rgba(0,188,212,.12), transparent)}
+.section h2{color:var(--pri);margin-top:0}
+.bullets{display:grid;gap:.5rem;padding-left:1.25rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;box-shadow:0 6px 18px var(--shadow)}
+.footer{border-top:1px solid var(--border);padding:2rem;text-align:center;background:#101417;color:var(--muted)}
+.contact-list{list-style:none;padding:0;display:grid;gap:.4rem}
+@media (max-width:720px){.nav{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:flex-end}}
+
+
+/* === Theme switcher === */
+:root[data-theme="oscuro"]{
+  --bg:#0c0f10; --surf:#12151a; --ink:#ffffff; --muted:#cfd8dc;
+  --pri:#00bcd4; --pri-2:#0099b3; --card:#0f141b; --border:#1f2833; --shadow:rgba(0,0,0,.35);
+}
+:root[data-theme="claro"]{
+  --bg:#f7fafc; --surf:#ffffff; --ink:#0c0f10; --muted:#334155;
+  --pri:#0ea5e9; --pri-2:#0284c7; --card:#ffffff; --border:#e5e7eb; --shadow:rgba(0,0,0,.1);
+}
+:root[data-theme="alto"]{
+  --bg:#000000; --surf:#000000; --ink:#ffffff; --muted:#ffffff;
+  --pri:#ffffff; --pri-2:#e6e6e6; --card:#000000; --border:#ffffff; --shadow:rgba(255,255,255,.2);
+}
+:root[data-theme="sepia"]{
+  --bg:#f4ecd8; --surf:#fbf5e6; --ink:#3b2f2f; --muted:#5c4b3b;
+  --pri:#b7791f; --pri-2:#975a16; --card:#fff8e7; --border:#e2d3b5; --shadow:rgba(60,40,10,.15);
+}
+
+/* Theme switcher menu */
+.theme-switcher{position:relative}
+.theme-btn{background:var(--card);color:var(--ink);border:1px solid var(--border);padding:.55rem .9rem;border-radius:10px;font-weight:700;cursor:pointer}
+.theme-menu{position:absolute;right:0;top:calc(100% + .5rem);background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 28px var(--shadow);min-width:220px;display:none}
+.theme-menu.open{display:block}
+.theme-menu button{display:block;width:100%;background:transparent;border:0;color:var(--ink);text-align:left;padding:.7rem .9rem;cursor:pointer}
+.theme-menu button:hover{background:rgba(127,127,127,.08)}
+
+/* Portfolio cards tweak */
+.cards.portfolio .card h3{margin:.2rem 0 .5rem}
+.cards.portfolio .card p{margin:0 0 .75rem}
+.card .tags{display:flex;gap:.4rem;flex-wrap:wrap}
+.tag{border:1px solid var(--border);border-radius:999px;padding:.15rem .5rem;font-size:.8rem;color:var(--muted)}
+
+
+/* Contact form */
+.contact-form{margin:1rem 0 0;display:grid;gap:.75rem;background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:var(--radius)}
+.contact-form label{display:grid;gap:.35rem;font-weight:700}
+.contact-form input,.contact-form textarea{background:var(--surf);color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:.65rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem}
+/* Sticky nav highlight (scrollspy) */
+.nav a.active{color:var(--pri);text-decoration:underline}
+body{scroll-behavior:smooth}

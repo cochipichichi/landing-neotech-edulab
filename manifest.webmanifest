@@ -1,0 +1,15 @@
+{
+  "name": "Neotech EduLab — Educación Inmersiva & I+D",
+  "short_name": "Neotech EduLab",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0c0f10",
+  "theme_color": "#0c0f10",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
