@@ -1,0 +1,23 @@
+[
+  {
+    "programa": "Semilla Inicia",
+    "region": "Ñuble",
+    "abre": "2026-04-10",
+    "cierra": "2026-05-31",
+    "url": "https://www.corfo.cl/sites/cpp/inf/semilla-inicia"
+  },
+  {
+    "programa": "Consolida y Expande Innovación",
+    "region": "Nacional",
+    "abre": "2026-05-15",
+    "cierra": "2026-06-26",
+    "url": "https://www.chileatiende.gob.cl/fichas/102203-consolida-y-expande-innovacion"
+  },
+  {
+    "programa": "Capital Humano para la Innovación",
+    "region": "Nacional",
+    "abre": "2026-03-01",
+    "cierra": "2026-12-15",
+    "url": "https://www.corfo.cl/sites/cpp/capital-humano"
+  }
+]

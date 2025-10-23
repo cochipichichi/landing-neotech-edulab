@@ -71,3 +71,20 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-s
 /* Sticky nav highlight (scrollspy) */
 .nav a.active{color:var(--pri);text-decoration:underline}
 body{scroll-behavior:smooth}
+
+
+/* Accessibility toolbar */
+#a11ybar{position:fixed;right:1rem;bottom:1rem;display:flex;gap:.5rem;background:var(--card);border:1px solid var(--border);padding:.4rem;border-radius:12px;box-shadow:0 10px 24px var(--shadow);z-index:999}
+#a11ybar button{background:var(--surf);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:.35rem .6rem;font-weight:800;cursor:pointer}
+/* Dyslexia-friendly font (use system fallback) */
+body.dyslexia{letter-spacing:.02em;word-spacing:.05em}
+
+
+/* Modal gallery */
+#modal{position:fixed;inset:0;display:none}
+#modal.open{display:block}
+#modal .m-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
+#modal .m-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:0 18px 50px var(--shadow);padding:1rem;max-width:min(90vw,720px)}
+#modal img{width:100%;height:auto;border-radius:12px;border:1px solid var(--border)}
+#modal .m-close{position:absolute;right:.5rem;top:.5rem;background:var(--surf);border:1px solid var(--border);border-radius:999px;width:36px;height:36px;font-size:20px;color:var(--ink);cursor:pointer}
+#modal .cap{margin:.6rem 0 0;color:var(--muted)}
